@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="cciaa.topic_view">
+
+    <include package="plone.app.contentmenu" />
+
+    <!-- -*- extra stuff goes here -*- -->
+    <browser:page
+	  name="cciaa_topic_view"
+	  class=".cciaa_topic.TopicView"
+	  template="cciaa_topic_view.pt"
+	  permission="zope2.View"
+	  for="*"
+	   />
+</configure>
