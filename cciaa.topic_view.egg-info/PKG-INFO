@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: cciaa.topic-view
-Version: 1.0.0dev-r437
+Version: 1.0.0dev-r448
 Summary: UNKNOWN
 Home-page: http://svn.plone.org/svn/plone/plone.example
 Author: RedTurtle Technology
@@ -29,6 +29,9 @@ Description: .. contents::
         
         Changelog
         =========
+        1.0.0 (2009-04-02)
+        ------------------
+        - Modifiche alla vista
         
         1.0.0 (2009-03-31)
         ------------------
