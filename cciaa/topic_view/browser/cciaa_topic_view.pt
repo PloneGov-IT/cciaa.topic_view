@@ -48,19 +48,24 @@
         <tal:listing condition="topicContents">
         <div>
 		    <table class="listing" border="1" width="100%">
-		    	<tbody>
+                        <tbody>
                 	<tal:block tal:repeat="item topicContents">
                     	<tr>
-                        	<td width="80px">
-				        		<img src="novita.png" alt="Config Page" title="Config">
+                            <td align="center" width="5%" tal:define="item_object item/getObject">
+                                <tal:hasImage condition="exists:item_object/image_thumb">
+                                    <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tileImage')" />
+                                </tal:hasImage>
+                                <tal:noImage condition="not:exists:item_object/image_thumb">
+                                    <img src="novita.png" alt="Config Page" title="Config"/>
+                                </tal:noImage>
                        	    </td>
                             <td>
                         		<a href="" tal:attributes="href item/getURL">
                             		<span tal:content="item/Title"/>
                            	 	</a>
-                            		<p tal:content="python:view.getDescr(item.getId)">
+                            		<div tal:content="python:view.getDescr(item.getId)">
                                			Elemento
-                                    </p>
+                                    </div>
                             </td>
                  		</tr>
              		</tal:block>
