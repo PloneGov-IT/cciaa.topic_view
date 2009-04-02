@@ -6,11 +6,17 @@ from Products.CMFCore.utils import getToolByName
 
 class TopicView(BrowserView):
     """Vista dei cercatori"""
+    IMG_TAG = u"""<img src="%s" alt="%s" title="%s" />"""
     
     def getDescr(self, doc_id):
         """restituisce la descrizione dell'oggetto"""
         context = self.context
-#        import pdb;pdb.set_trace()
         page = getattr(context, doc_id)
-        
         return page.Description()
+    
+    def generateImgTag(self, icon, alt="", title=""):
+        """Dato un'icona caricata dal tramite @@plone.getIcon ne genera un tag (X)HTML da usare
+        per la modulistica
+        """
+        src = icon.url
+        return self.IMG_TAG % (src, alt, title)
