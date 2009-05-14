@@ -12,5 +12,15 @@
 	  template="cciaa_topic_view.pt"
 	  permission="zope2.View"
 	  for="*"
-	   />
+	  />
+       
+    <browser:menuItems
+      for="Products.ATContentTypes.interface.IATTopic"
+      menu="plone_displayviews">
+      <browser:menuItem
+        title="Vista collezioni cciaa"
+        action="cciaa_topic_view"
+        description="Visualizzazione dei topic per cciaa."
+        />
+    </browser:menuItems>
 </configure>
