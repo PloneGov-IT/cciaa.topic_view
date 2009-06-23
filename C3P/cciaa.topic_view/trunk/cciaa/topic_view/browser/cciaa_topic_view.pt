@@ -63,7 +63,7 @@
                         		<a href="" tal:attributes="href item/getURL">
                             		<span tal:content="item/Title"/>
                            	 	</a>
-                            		<div tal:content="python:view.getDescr(item.getId)">
+                            		<div tal:content="item/Description">
                                			Elemento
                                     </div>
                             </td>
