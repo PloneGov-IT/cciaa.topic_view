@@ -1,6 +1,11 @@
 table.cciaa_topic_view {
 	border: 1px solid #999;
 	width: 98%;
+	border-collapse: collapse;
+}
+table.cciaa_topic_view td {
+	border: 1px solid #999;
+	border-collapse: collapse;
 }
 
 table.cciaa_topic_view .tileImage {
