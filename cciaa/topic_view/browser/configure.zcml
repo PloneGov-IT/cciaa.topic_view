@@ -23,4 +23,11 @@
         description="Visualizzazione dei topic per cciaa."
         />
     </browser:menuItems>
+    
+    <!-- Resource directory for stylesheets -->
+    <browser:resourceDirectory
+        name="cciaa.topic_view.stylesheets"
+        directory="stylesheets"
+        />
+        
 </configure>

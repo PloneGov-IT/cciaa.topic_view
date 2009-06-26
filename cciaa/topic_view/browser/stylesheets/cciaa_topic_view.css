@@ -1,0 +1,8 @@
+table.cciaa_topic_view {
+	border: 1px solid #999;
+	width: 98%;
+}
+
+table.cciaa_topic_view .tileImage {
+	border:0;
+}

@@ -47,7 +47,7 @@
 
         <tal:listing condition="topicContents">
         <div>
-		    <table class="listing" border="1" width="100%">
+		    <table class="listing cciaa_topic_view">
                         <tbody>
                 	<tal:block tal:repeat="item topicContents">
                     	<tr>
