@@ -1,7 +1,0 @@
-Changelog
-=========
-
-
-1.0.0 (2009-03-31)
-------------------
- - Creazione del prodotto per la vista di un cercatore
