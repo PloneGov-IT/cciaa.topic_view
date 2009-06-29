@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.0.4-SVN-Unreleased (2009-06-29)
+------------------
+ - Modificati stili tabella [irene]
+
 1.0.3 (2009-06-26)
 ------------------
  - Creato file css ad hoc per problemi con IE (#103) [irene]
