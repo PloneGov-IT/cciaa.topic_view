@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.4-SVN-Unreleased (2009-06-29)
+1.0.4 (2009-06-29)
 ------------------
  - Modificati stili tabella [irene]
  - ingrandito un po' il font del titolo negli oggetti del topic (#103) [irene]
