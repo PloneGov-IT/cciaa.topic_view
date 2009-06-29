@@ -47,13 +47,13 @@
 
         <tal:listing condition="topicContents">
         <div>
-		    <table class="listing cciaa_topic_view">
+		    <table class="cciaa_topic_view">
                         <tbody>
                 	<tal:block tal:repeat="item topicContents">
                     	<tr>
                             <td align="center" width="5%" tal:define="item_object item/getObject">
                                 <tal:hasImage condition="exists:item_object/image_thumb">
-                                    <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tileImage')" />
+                                    <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tImage')" />
                                 </tal:hasImage>
                                 <tal:noImage condition="not:exists:item_object/image_thumb">
                                     <img src="novita.png" alt="Config Page" title="Config"/>

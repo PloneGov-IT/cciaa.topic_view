@@ -1,14 +1,13 @@
 table.cciaa_topic_view {
-	border: 1px solid #999;
+	border: 0;
 	width: 97%;
-	border-collapse: collapse;
 }
 table.cciaa_topic_view td {
-	border: 1px solid #999;
-	border-collapse: collapse;
+	border-bottom: 1px dashed #999;
+	padding: 0.8em 0.5em;
 }
 
-table.cciaa_topic_view .tileImage {
+table.cciaa_topic_view .tImage {
 	border:0;
 	margin:0;
 	padding:0;
