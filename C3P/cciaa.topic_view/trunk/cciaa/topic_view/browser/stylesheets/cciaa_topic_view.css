@@ -12,3 +12,9 @@ table.cciaa_topic_view .tImage {
 	margin:0;
 	padding:0;
 }
+.center {
+	text-align: center;
+}
+table.cciaa_topic_view .title_item {
+	font-size: 1.2em;
+}
