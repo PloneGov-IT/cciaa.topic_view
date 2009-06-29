@@ -51,7 +51,7 @@
                         <tbody>
                 	<tal:block tal:repeat="item topicContents">
                     	<tr>
-                            <td align="center" width="5%" tal:define="item_object item/getObject">
+                            <td class="center" width="5%" tal:define="item_object item/getObject">
                                 <tal:hasImage condition="exists:item_object/image_thumb">
                                     <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tImage')" />
                                 </tal:hasImage>
@@ -61,7 +61,7 @@
                        	    </td>
                             <td>
                         		<a href="" tal:attributes="href item/getURL">
-                            		<span tal:content="item/Title"/>
+                            		<span class="title_item" tal:content="item/Title"/>
                            	 	</a>
                             		<div tal:content="item/Description">
                                			Elemento
