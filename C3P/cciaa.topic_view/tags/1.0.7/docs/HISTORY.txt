@@ -1,0 +1,26 @@
+Changelog
+=========
+1.0.7
+-----
+
+* inserita descrizione nella vista (#53) [andrea]
+
+1.0.6
+-----
+
+* Fix al template: mancava anche qualche carattere unicode rimasto [keul]
+
+1.0.5
+-----
+
+* Cambiata l'integrazione con cciaa.c3p.folder: niente più getColumnsNames ma getColumns [keul]
+* Fix all'errore unicode in presenza di file con caratteri non ASCII (#75) [keul]
+* generate le icone non più attraverso ploneview perché non le mostrava agli anonimi (#88) [andrea]
+* Fix a vari errori nella costruzione del codice XHTML
+* aggiunta classe css sul titolo
+
+1.0.0 - Unreleased
+----------------
+
+* Initial release
+
