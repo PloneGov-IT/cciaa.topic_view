@@ -51,7 +51,7 @@
                         <tbody>
                 	<tal:block tal:repeat="item topicContents">
                     	<tr>
-                            <td class="center" width="5%" tal:define="item_object item/getObject">
+                            <td class="center" tal:define="item_object item/getObject">
                                 <tal:hasImage condition="exists:item_object/image_thumb">
                                     <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tImage')" />
                                 </tal:hasImage>
@@ -88,9 +88,9 @@
             Please add them using the 'criteria' tab.
         </p>
         <div tal:condition="here/getText">
-		<p tal:content="structure here/getText">
+		<span tal:replace="structure here/getText">
             Text
-        </p>
+        </span>
         </div>
             <!-- Navigation -->
             <div metal:use-macro="here/batch_macros/macros/navigation" />

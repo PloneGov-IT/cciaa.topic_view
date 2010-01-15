@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.8 (2010-01-15)
+------------------
+
+* sistemati errori che non validavano la vista [andrea]
+
 1.0.7 (2010-01-13)
 ------------------
 
