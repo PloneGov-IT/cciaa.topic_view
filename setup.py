@@ -14,7 +14,7 @@ tests_require=['zope.testing']
 
 setup(name='cciaa.topic_view',
       version=version,
-      description="",
+      description="Additional view for Collection in Plone, with a common C2P/C3P CCIAA layout",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
