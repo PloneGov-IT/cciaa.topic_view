@@ -5,10 +5,7 @@ This module contains the tool of cciaa.topic_view
 import os
 from setuptools import setup, find_packages
 
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
-
-version = '1.0.9'
+version = '1.1.0dev'
 
 tests_require=['zope.testing']
 
@@ -24,9 +21,9 @@ setup(name='cciaa.topic_view',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
-      keywords='',
+      keywords='plone plonegov collection view home-page',
       author='RedTurtle Technology',
-      author_email='info@redturtle.net',
+      author_email='sviluppoplone@redturtle.net',
       url='http://svn.plone.org/svn/plone/plone.example',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
@@ -40,7 +37,6 @@ setup(name='cciaa.topic_view',
       extras_require=dict(tests=tests_require),
       test_suite = 'cciaa.topic_view.tests.test_docs.test_suite',
       entry_points="""
-      # -*- entry_points -*-
       [z3c.autoinclude.plugin]
       target = plone
       """,
