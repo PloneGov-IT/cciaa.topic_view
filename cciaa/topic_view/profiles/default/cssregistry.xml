@@ -3,7 +3,7 @@
 
  <stylesheet title=""
     id="++resource++cciaa.topic_view.stylesheets/cciaa_topic_view.css"
-    media="screen" rel="stylesheet" rendering="import"
+    media="all" rel="stylesheet" rendering="import"
     cacheable="True" compression="safe" cookable="True"
     enabled="1" expression=""/>
 
