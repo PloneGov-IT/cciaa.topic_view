@@ -17,9 +17,9 @@
       for="Products.ATContentTypes.interface.IATTopic"
       menu="plone_displayviews">
       <browser:menuItem
-        title="Vista collezioni cciaa"
+        title="Vista collezioni CCIAA"
         action="cciaa_topic_view"
-        description="Visualizzazione dei topic per cciaa."
+        description="Visualizzazione delle collezioni per CCIAA."
         />
     </browser:menuItems>
     
