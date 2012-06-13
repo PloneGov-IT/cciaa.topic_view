@@ -1,14 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       lang="en"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="cciaa.topic_view">
+      i18n:domain="plone">
 
 <body>
 
 <div metal:fill-slot="main">
 <metal:main_macro define-macro="main">
     <metal:body define-macro="body_macro"
-                tal:define="templateId template/getId;">
+                tal:define="kssClassesView context/@@kss_field_decorator_view;
+                            getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                            templateId template/getId">
 
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
@@ -30,12 +32,12 @@
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
         <metal:listingmacro define-macro="listing">
-        <tal:topiccontents define="topicContents python:context.queryCatalog(batch=True);
+        <tal:topiccontents define="topicContents python:here.queryCatalog(batch=True);
                                    batch topicContents;">
 
         <tal:listing condition="topicContents">
-            <a style="text-align: right" href="#"
-               tal:condition="nocall: context/asPDF|nothing"
+            <a style='text-align: right' href="#"
+               tal:condition="nocall: here/asPDF|nothing"
                tal:attributes="href string:${here_url}/asPDF/atct_topic_pdf_template/atct_topic_pdf"
                i18n:translate="label_download_as_pdf"
                i18n:domain="atcontenttypes">
@@ -54,7 +56,7 @@
                                     <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tImage')" />
                                 </tal:hasImage>
                                 <tal:noImage condition="not:exists:item_object/image_thumb">
-                                    <img tal:attributes="src string:${context/portal_url}/++resource++cciaa.topic_view.images/news.png" alt="Logo novità" title="Novità"/>
+                                    <img tal:attributes="src string:${context/portal_url}/novita.png" alt="Logo novità" title="Novità"/>
                                 </tal:noImage>
                        	    </td>
                             <td>

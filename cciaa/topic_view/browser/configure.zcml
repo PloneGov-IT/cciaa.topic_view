@@ -22,15 +22,35 @@
         description="Visualizzazione delle collezioni per CCIAA."
         />
     </browser:menuItems>
+
+    <browser:page
+      name="cciaa_adseq_view"
+      class=".cciaa_adseq.TopicView"
+      template="cciaa_adseq_view.pt"
+      permission="zope2.View"
+      for="*"
+    />
+
+    <browser:menuItems
+      for="Products.ATContentTypes.interface.IATTopic"
+      menu="plone_displayviews">
+      <browser:menuItem
+         title="Vista collezioni Sisma CCIAA"
+         action="cciaa_adseq_view"
+         description="Visualizzazione delle collezioni x offerte sisma CCIAA."
+      />
+    </browser:menuItems>
+
     
     <!-- Resource directory for stylesheets -->
     <browser:resourceDirectory
         name="cciaa.topic_view.stylesheets"
         directory="stylesheets"
         />
+
     <browser:resourceDirectory
         name="cciaa.topic_view.images"
-        directory="images"
-        />
+	directory="images"
+	/>
         
 </configure>
