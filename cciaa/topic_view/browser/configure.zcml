@@ -5,6 +5,7 @@
 
     <include package="plone.app.contentmenu" />
 
+    <!-- -*- extra stuff goes here -*- -->
     <browser:page
 	  name="cciaa_topic_view"
 	  class=".cciaa_topic.TopicView"
@@ -17,9 +18,9 @@
       for="Products.ATContentTypes.interface.IATTopic"
       menu="plone_displayviews">
       <browser:menuItem
-        title="Vista collezioni CCIAA"
+        title="Vista collezioni cciaa"
         action="cciaa_topic_view"
-        description="Visualizzazione delle collezioni per CCIAA."
+        description="Visualizzazione dei topic per cciaa."
         />
     </browser:menuItems>
     
@@ -27,10 +28,6 @@
     <browser:resourceDirectory
         name="cciaa.topic_view.stylesheets"
         directory="stylesheets"
-        />
-    <browser:resourceDirectory
-        name="cciaa.topic_view.images"
-        directory="images"
         />
         
 </configure>
