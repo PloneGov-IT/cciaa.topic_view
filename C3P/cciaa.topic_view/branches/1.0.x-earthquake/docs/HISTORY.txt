@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.9-earthquake (2011-06-13)
+-----------------------------
+
+* viste aggiuntive per l'emenrgenza terremoto [Francesco Margutti]
+
 1.0.9 (2010-08-17)
 ------------------
 

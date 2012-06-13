@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = '1.0.9'
+version = '1.0.9-earthquake'
 
 tests_require=['zope.testing']
 
