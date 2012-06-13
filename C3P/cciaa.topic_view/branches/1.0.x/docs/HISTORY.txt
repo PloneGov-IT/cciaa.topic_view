@@ -1,0 +1,47 @@
+Changelog
+=========
+
+1.0.9 (2010-08-17)
+------------------
+
+* supporto a z3c.autoinclude [keul]
+
+1.0.8 (2010-01-15)
+------------------
+
+* sistemati errori che non validavano la vista [andrea]
+
+1.0.7 (2010-01-13)
+------------------
+
+* Fissato il formato dell'egg [keul]
+
+1.0.6 (2009-07-06)
+------------------
+* Corretto alt su immagine di default [irene]
+
+1.0.5 (2009-06-30)
+------------------
+* Corretto Topic.xml [andrea]
+ 
+1.0.4 (2009-06-29)
+------------------
+* Modificati stili tabella [irene]
+* ingrandito un po' il font del titolo negli oggetti del topic (#103) [irene]
+
+1.0.3 (2009-06-26)
+------------------
+* Creato file css ad hoc per problemi con IE (#103) [irene]
+
+1.0.2 (2009-06-23)
+------------------
+* Risolto baco nella vista (#13) [andrea]
+
+1.0.1 (2009-04-02)
+------------------
+* Modifiche alla vista
+
+1.0.0 (2009-03-31)
+------------------
+* Creazione del prodotto per la vista di un cercatore
+

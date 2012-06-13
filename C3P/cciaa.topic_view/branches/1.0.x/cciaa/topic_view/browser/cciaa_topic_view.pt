@@ -1,0 +1,120 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<body>
+
+<div metal:fill-slot="main">
+<metal:main_macro define-macro="main">
+    <metal:body define-macro="body_macro"
+                tal:define="kssClassesView context/@@kss_field_decorator_view;
+                            getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                            templateId template/getId">
+
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 class="documentFirstHeading"> 
+            <metal:field use-macro="python:here.widget('title', mode='view')">
+            Title
+            </metal:field>
+        </h1>
+
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <p class="documentDescription">
+            <metal:field use-macro="python:here.widget('description', mode='view')">
+            Description
+            </metal:field>
+        </p>
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
+        <metal:listingmacro define-macro="listing">
+        <tal:topiccontents define="topicContents python:here.queryCatalog(batch=True);
+                                   batch topicContents;">
+
+        <tal:listing condition="topicContents">
+            <a style='text-align: right' href="#"
+               tal:condition="nocall: here/asPDF|nothing"
+               tal:attributes="href string:${here_url}/asPDF/atct_topic_pdf_template/atct_topic_pdf"
+               i18n:translate="label_download_as_pdf"
+               i18n:domain="atcontenttypes">
+                Download PDF
+            </a>
+        </tal:listing>
+
+        <tal:listing condition="topicContents">
+        <div>
+		    <table class="cciaa_topic_view">
+                        <tbody>
+                	<tal:block tal:repeat="item topicContents">
+                    	<tr>
+                            <td class="center" tal:define="item_object item/getObject">
+                                <tal:hasImage condition="exists:item_object/image_thumb">
+                                    <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tImage')" />
+                                </tal:hasImage>
+                                <tal:noImage condition="not:exists:item_object/image_thumb">
+                                    <img tal:attributes="src string:${context/portal_url}/novita.png" alt="Logo novità" title="Novità"/>
+                                </tal:noImage>
+                       	    </td>
+                            <td>
+                        		<a href="" tal:attributes="href item/getURL">
+                            		<span class="title_item" tal:content="item/Title"/>
+                           	 	</a>
+                            		<div tal:content="item/Description">
+                               			Elemento
+                                    </div>
+                            </td>
+                 		</tr>
+             		</tal:block>
+          		</tbody>
+		  	</table>
+		</div>
+        </tal:listing>
+        <p class="discreet"
+           tal:condition="python: not topicContents and here.listCriteria()"
+           i18n:domain="atcontenttypes"
+           i18n:translate="description_no_items_in_topic">
+            There are currently no results for this search.
+        </p>
+
+        <p class="discreet"
+           tal:condition="not: here/listCriteria"
+           i18n:domain="atcontenttypes"
+           i18n:translate="description_no_criteria_in_topic">
+            There are currently no criteria on which to search.
+            Please add them using the 'criteria' tab.
+        </p>
+        <div tal:condition="here/getText">
+		<span tal:replace="structure here/getText">
+            Text
+        </span>
+        </div>
+            <!-- Navigation -->
+            <div metal:use-macro="here/batch_macros/macros/navigation" />
+
+        </tal:topiccontents>
+        </metal:listingmacro>
+    </metal:body>
+
+    <metal:body define-macro="folderlisting_macro">
+        <tal:subtopics condition="here/hasSubtopics|nothing"
+                       define="folderContents here/getFolderContents">
+            <h2 i18n:domain="atcontenttypes"
+                i18n:translate="heading_contained_collections">
+                Also in this section
+            </h2>
+            <metal:list metal:use-macro="here/base/macros/folderlisting"/>
+        </tal:subtopics>
+    </metal:body>
+
+    <div tal:replace="structure provider:plone.belowcontentbody" />
+
+</metal:main_macro>
+
+</div>
+
+</body>
+</html>
