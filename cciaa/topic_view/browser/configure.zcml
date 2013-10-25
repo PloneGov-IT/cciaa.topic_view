@@ -10,9 +10,17 @@
 	  class=".cciaa_topic.TopicView"
 	  template="cciaa_topic_view.pt"
 	  permission="zope2.View"
-	  for="*"
+	  for="Products.ATContentTypes.interface.IATTopic"
 	  />
-       
+
+    <browser:page
+      name="cciaa_collection_view"
+      class=".cciaa_topic.TopicView"
+      template="cciaa_collection_view.pt"
+      permission="zope2.View"
+      for="plone.app.collection.interfaces.ICollection"
+      />
+
     <browser:menuItems
       for="Products.ATContentTypes.interface.IATTopic"
       menu="plone_displayviews">
@@ -23,6 +31,16 @@
         />
     </browser:menuItems>
     
+    <browser:menuItems
+      for="plone.app.collection.interfaces.ICollection"
+      menu="plone_displayviews">
+      <browser:menuItem
+        title="Vista collezioni CCIAA"
+        action="cciaa_collection_view"
+        description="Visualizzazione delle collezioni per CCIAA."
+        />
+    </browser:menuItems>
+
     <!-- Resource directory for stylesheets -->
     <browser:resourceDirectory
         name="cciaa.topic_view.stylesheets"
