@@ -16,7 +16,11 @@
 
         <metal:listingmacro define-macro="listing">
         <tal:results define="b_start python:request.get('b_start', 0);
-                             batch python:context.results(b_start=b_start, batch=True, b_size=20);
+                             limit here/getLimit;
+                             results python:context.results(batch=False);
+                             Batch python:modules['Products.CMFPlone'].Batch;
+                             b_size python:20;b_start python:0;b_start request/b_start | b_start;
+                             batch python:Batch(results[:limit], b_size, int(b_start), orphan=1);
                              site_properties context/portal_properties/site_properties;
                              use_view_action site_properties/typesUseViewActionInListings|python:();
                              isAnon context/@@plone_portal_state/anonymous;
@@ -28,14 +32,14 @@
         <tal:listing condition="batch">
           <table class="cciaa_topic_view">
             <tbody>
-              <tal:block tal:repeat="item batch">
+              <tal:block tal:repeat="item python:batch">
                 <tr>
                   <td class="center" tal:define="item_object item/getObject">
                     <tal:hasImage condition="exists:item_object/image_thumb">
                       <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tImage')" />
                     </tal:hasImage>
                       <tal:noImage condition="not:exists:item_object/image_thumb">
-                        <img tal:attributes="src string:${context/portal_url}/++resource++cciaa.topic_view.images/news.png" alt="Logo novitÃ " title="NovitÃ "/>
+                        <img tal:attributes="src string:${context/portal_url}/++resource++cciaa.topic_view.images/news.png" alt="Logo novità " title="Novità "/>
                     </tal:noImage>
                   </td>
                   <td>

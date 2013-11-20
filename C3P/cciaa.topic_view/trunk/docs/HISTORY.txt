@@ -5,7 +5,7 @@ Changelog
 ------------------
 
 * migration to Plone 4.1
-* Added support for plone.app.collection [andrea]
+* Added support for plone.app.collection [cekk]
 
 1.0.9 (and before)
 ------------------
