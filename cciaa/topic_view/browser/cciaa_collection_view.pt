@@ -39,7 +39,7 @@
                       <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tImage')" />
                     </tal:hasImage>
                       <tal:noImage condition="not:exists:item_object/image_thumb">
-                        <img tal:attributes="src string:${context/portal_url}/++resource++cciaa.topic_view.images/news.png" alt="Logo novità " title="Novità "/>
+                        <img tal:attributes="src string:${context/portal_url}/++resource++news_default.png" alt="Logo novità" title="Novità"/>
                     </tal:noImage>
                   </td>
                   <td>

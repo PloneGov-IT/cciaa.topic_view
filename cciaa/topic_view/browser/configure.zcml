@@ -46,9 +46,9 @@
         name="cciaa.topic_view.stylesheets"
         directory="stylesheets"
         />
-    <browser:resourceDirectory
-        name="cciaa.topic_view.images"
-        directory="images"
+    <browser:resource
+        name="news_default.png"
+        file="news_default.png"
         />
         
 </configure>
