@@ -1,0 +1,17 @@
+Changelog
+=========
+
+1.1.0 (2013-12-16)
+------------------
+
+Plone 4.3 supported
+
+* Added support for plone.app.collection [cekk]
+
+1.0.9 (and before)
+------------------
+
+* a lot of italian-only changes
+
+
+
