@@ -5,7 +5,7 @@ This module contains the tool of cciaa.topic_view
 import os
 from setuptools import setup, find_packages
 
-version = '1.1.0'
+version = '1.1.1.dev0'
 
 tests_require=['zope.testing']
 
