@@ -4,7 +4,7 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed collection_view batching [cekk]
 
 
 1.1.0 (2013-12-16)
