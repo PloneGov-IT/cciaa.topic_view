@@ -16,11 +16,7 @@
 
         <metal:listingmacro define-macro="listing">
         <tal:results define="b_start python:request.get('b_start', 0);
-                             limit here/getLimit;
-                             results python:context.results(batch=False);
-                             Batch python:modules['Products.CMFPlone'].Batch;
-                             b_size python:20;b_start python:0;b_start request/b_start | b_start;
-                             batch python:Batch(results[:limit], b_size, int(b_start), orphan=1);
+                             batch python:context.results(b_start=b_start);
                              site_properties context/portal_properties/site_properties;
                              use_view_action site_properties/typesUseViewActionInListings|python:();
                              isAnon context/@@plone_portal_state/anonymous;
