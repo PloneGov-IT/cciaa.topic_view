@@ -29,8 +29,8 @@
           <table class="cciaa_topic_view">
             <tbody>
               <tal:block tal:repeat="item python:batch">
-                <tr>
-                  <td class="center" tal:define="item_object item/getObject">
+                <tr tal:define="item_object item/getObject;">
+                  <td class="center">
                     <tal:hasImage condition="exists:item_object/image_thumb">
                       <img src="" alt="" tal:replace="structure python: path('nocall:item_object/tag')(scale='thumb', css_class='tImage')" />
                     </tal:hasImage>
@@ -39,6 +39,9 @@
                     </tal:noImage>
                   </td>
                   <td>
+					<div class="dataNews" tal:content="python:toLocalizedTime(item.Date())">
+						27/05/2012
+					</div>
                     <a href="" tal:attributes="href item/getURL">
                       <span class="title_item" tal:content="item/Title"/>
                     </a>

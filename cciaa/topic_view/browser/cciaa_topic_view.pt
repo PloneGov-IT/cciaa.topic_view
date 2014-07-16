@@ -43,6 +43,9 @@
                         </tal:noImage>
                       </td>
                       <td>
+                        <div class="dataNews" tal:content="python:toLocalizedTime(item.Date())">
+                            27/05/2012
+                        </div>
                         <a href="" tal:attributes="href item/getURL">
                           <span class="title_item" tal:content="item/Title"/>
                         </a>
