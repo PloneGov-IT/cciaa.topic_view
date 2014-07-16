@@ -19,3 +19,11 @@ table.cciaa_topic_view .tImage {
 table.cciaa_topic_view .title_item {
 	font-size: 1.2em;
 }
+
+table.cciaa_topic_view .dataNews {
+	float: right;
+	margin: 0px;
+	color: #666;
+	text-align: right;
+	font-weight: bold;
+}
