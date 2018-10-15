@@ -12,11 +12,15 @@ tests_require=['zope.testing']
 setup(name='cciaa.topic_view',
       version=version,
       description="Additional view for Collection in Plone, with a common C2P/C3P CCIAA layout",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=open("README.rst").read() + "\n" +
+                       open(os.path.join("docs", "HISTORY.rst")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         'Framework :: Plone',
+        'Framework :: Plone :: 4.0',
+        'Framework :: Plone :: 4.1',
+        'Framework :: Plone :: 4.2',
+        'Framework :: Plone :: 4.3',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: GNU General Public License (GPL)',
@@ -24,7 +28,7 @@ setup(name='cciaa.topic_view',
       keywords='plone plonegov collection view home-page',
       author='RedTurtle Technology',
       author_email='sviluppoplone@redturtle.net',
-      url='https://code.redturtle.it/svn/camera_di_commercio_fe/C3P/cciaa.topic_view/',
+      url='https://github.com/PloneGov-IT/cciaa.topic_view',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['cciaa', ],
